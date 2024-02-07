@@ -1,7 +1,7 @@
 export default {
   providers: [
     {
-      domain: "https://novel-chimp-55.clerk.accounts.dev",
+      domain: "https://bursting-eel-3.clerk.accounts.dev",
       applicationID: "convex",
     },
   ],
