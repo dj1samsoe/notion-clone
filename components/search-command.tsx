@@ -20,7 +20,7 @@ import { api } from "@/convex/_generated/api";
 export const SearchCommand = () => {
   const { user } = useUser();
   const router = useRouter();
-  const documents = useQuery(api.document.getSearch);
+  const documents = useQuery(api.documents.getSearch);
   const [isMounted, setIsMounted] = useState(false);
 
   const toggle = useSearch((store) => store.toggle);

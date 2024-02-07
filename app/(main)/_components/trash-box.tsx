@@ -15,9 +15,9 @@ import { toast } from "sonner";
 export const TrashBox = () => {
   const router = useRouter();
   const params = useParams();
-  const documents = useQuery(api.document.getTrash);
-  const restore = useMutation(api.document.restore);
-  const remove = useMutation(api.document.remove);
+  const documents = useQuery(api.documents.getTrash);
+  const restore = useMutation(api.documents.restore);
+  const remove = useMutation(api.documents.remove);
   const { edgestore } = useEdgeStore();
 
   const [search, setSearch] = useState("");

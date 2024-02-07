@@ -21,7 +21,7 @@ interface PublishProps {
 
 export const Publish = ({ initialData }: PublishProps) => {
   const origin = useOrigin();
-  const update = useMutation(api.document.update);
+  const update = useMutation(api.documents.update);
 
   const [copied, setCopied] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);

@@ -26,7 +26,7 @@ export const Menu = ({ documentId }: MenuProps) => {
   const router = useRouter();
   const { user } = useUser();
 
-  const archive = useMutation(api.document.archive);
+  const archive = useMutation(api.documents.archive);
 
   const onArchive = () => {
     const promise = archive({ id: documentId });

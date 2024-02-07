@@ -30,7 +30,7 @@ export const DocumentList = ({
     }));
   };
 
-  const documents = useQuery(api.document.getSidebar, {
+  const documents = useQuery(api.documents.getSidebar, {
     parentDocument: parentDocumentId,
   });
 

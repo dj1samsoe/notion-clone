@@ -10,22 +10,22 @@ import { EdgeStoreProvider } from "@/lib/edgeStore";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Nextion",
-  description: "Nextion clone Notion with Next.js and Tailwind CSS",
-  // icons: {
-  //   icon: [
-  //     {
-  //       media: "(prefers-color-scheme: light)",
-  //       url: "/logo.png",
-  //       href: "/logo.png",
-  //     },
-  //     {
-  //       media: "(prefers-color-scheme: dark)",
-  //       url: "/logo-dark.png",
-  //       href: "/logo-dark.png",
-  //     },
-  //   ],
-  // },
+  title: "Dotion",
+  description: "Dotion clone Notion with Next.js and Tailwind CSS",
+  icons: {
+    icon: [
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/logo.png",
+        href: "/logo.png",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/logo-dark.png",
+        href: "/logo-dark.png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -43,7 +43,7 @@ export default function RootLayout({
               defaultTheme="system"
               enableSystem
               disableTransitionOnChange
-              storageKey="nextion-theme"
+              storageKey="dotion-theme"
             >
               <Toaster position="bottom-right" />
               <ModalProvider />

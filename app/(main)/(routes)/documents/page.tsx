@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 
 const DocumentsPage = () => {
   const { user } = useUser();
-  const create = useMutation(api.document.create);
+  const create = useMutation(api.documents.create);
 
   const router = useRouter();
 
@@ -28,7 +28,7 @@ const DocumentsPage = () => {
   };
 
   return (
-    <div className="h-full flex flex-col items-center justify-center space-y-4">
+    <div className="min-h-screen flex flex-col items-center justify-center space-y-4">
       <Image
         src="/empty.png"
         width={300}
@@ -45,7 +45,7 @@ const DocumentsPage = () => {
       />
       <h2 className="text-lg font-medium">
         Welcome to {user?.firstName}&apos;s{" "}
-        <span className="font-bold">Nextion</span>
+        <span className="font-bold">Dotion</span>
       </h2>
       <Button onClick={onCreate}>
         <PlusCircle className="h-4 w-4 mr-2" />

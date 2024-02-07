@@ -16,9 +16,9 @@ interface BannerProps {
 export const Banner = ({ documentId }: BannerProps) => {
   const router = useRouter();
 
-  const remove = useMutation(api.document.remove);
-  const restore = useMutation(api.document.restore);
-  const document = useQuery(api.document.getById, { documentId: documentId });
+  const remove = useMutation(api.documents.remove);
+  const restore = useMutation(api.documents.restore);
+  const document = useQuery(api.documents.getById, { documentId: documentId });
 
   const { edgestore } = useEdgeStore();
 

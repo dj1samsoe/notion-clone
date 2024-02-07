@@ -19,7 +19,7 @@ interface CoverProps {
 
 export const Cover = ({ url, preview }: CoverProps) => {
   const coverImage = useCoverImage();
-  const removeCoverImage = useMutation(api.document.removeCoverImage);
+  const removeCoverImage = useMutation(api.documents.removeCoverImage);
   const params = useParams();
   const { edgestore } = useEdgeStore();
 
@@ -35,7 +35,7 @@ export const Cover = ({ url, preview }: CoverProps) => {
   return (
     <div
       className={cn(
-        "relative w-full h-[35vh] group",
+        "relative w-full h-[40vh] group",
         !url && "h-[12vh]",
         url && "bg-muted"
       )}

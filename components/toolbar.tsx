@@ -24,8 +24,8 @@ export const Toolbar = ({ initialData, preview }: ToolbarProps) => {
   const [isEditing, setIsEditing] = useState(false);
   const [value, setValue] = useState(initialData.title);
 
-  const update = useMutation(api.document.update);
-  const removeIcon = useMutation(api.document.removeIcon);
+  const update = useMutation(api.documents.update);
+  const removeIcon = useMutation(api.documents.removeIcon);
 
   const enableEditing = () => {
     if (preview) return;

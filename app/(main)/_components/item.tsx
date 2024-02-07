@@ -51,10 +51,10 @@ export const Item = ({
   expanded,
 }: ItemProps) => {
   const { user } = useUser();
-  const create = useMutation(api.document.create);
+  const create = useMutation(api.documents.create);
   const router = useRouter();
 
-  const archive = useMutation(api.document.archive);
+  const archive = useMutation(api.documents.archive);
 
   const onArchive = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     event.stopPropagation();

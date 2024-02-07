@@ -13,7 +13,7 @@ import { Id } from "@/convex/_generated/dataModel";
 
 export const CoverImageModal = () => {
   const params = useParams();
-  const update = useMutation(api.document.update);
+  const update = useMutation(api.documents.update);
   const coverImage = useCoverImage();
   const { edgestore } = useEdgeStore();
 

@@ -16,7 +16,7 @@ interface TitleProps {
 
 export const Title = ({ initialData }: TitleProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
-  const update = useMutation(api.document.update);
+  const update = useMutation(api.documents.update);
 
   const [title, setTitle] = useState(initialData.title || "Untitled");
   const [isEditing, setIsEditing] = useState(false);
