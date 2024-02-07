@@ -27,7 +27,7 @@ const Editor = ({ onChange, initialContent, editable }: EditorProps) => {
   });
 
   return (
-    <div>
+    <div className="sm:!px-7 !px-0">
       <BlockNoteView
         editor={editor}
         theme={resolvedTheme === "dark" ? "dark" : "light"}

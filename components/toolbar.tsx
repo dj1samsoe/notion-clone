@@ -24,7 +24,7 @@ export const Toolbar = ({ initialData, preview }: ToolbarProps) => {
   const [isEditing, setIsEditing] = useState(false);
   const [value, setValue] = useState(initialData.title);
 
-  const update = useMutation(api.documents.update);
+  const update: any = useMutation(api.documents.update);
   const removeIcon = useMutation(api.documents.removeIcon);
 
   const enableEditing = () => {
@@ -67,12 +67,16 @@ export const Toolbar = ({ initialData, preview }: ToolbarProps) => {
   };
 
   return (
-    <div className="pl-[54px] group relative">
+    <div className="sm:px-20 px-12 group relative">
       {!!initialData.icon && !preview && (
-        <div className="flex items-center gap-x-2 group/icon pt-6">
+        <div className="flex items-center gap-x-2 group/icon -mt-11">
           <IconPicker onChange={onIconSelect}>
-            <p className="text-6xl hover:opacity-75 transition">
-              <Emoji unified={initialData.icon} size={64} />
+            <p className="text-6xl dark:hover:bg-white/10 hover:bg-neutral-300 rounded-sm">
+              <Emoji
+                unified={initialData.icon}
+                size={80}
+                key={initialData.icon}
+              />
             </p>
           </IconPicker>
           <Button
@@ -86,13 +90,13 @@ export const Toolbar = ({ initialData, preview }: ToolbarProps) => {
         </div>
       )}
       {!!initialData.icon && preview && (
-        <p className="text-6xl hover:opacity-75 transition">
-          <Emoji unified={initialData.icon} size={64} />
+        <p className="-mt-11">
+          <Emoji unified={initialData.icon} size={80} key={initialData.icon} />
         </p>
       )}
       <div className="opacity-0 group-hover:opacity-100 flex items-center gap-x-1 py-4">
         {!initialData.icon && !preview && (
-          <IconPicker asChild onChange={onIconSelect}>
+          <IconPicker onChange={onIconSelect}>
             <Button
               className="text-muted-foreground text-xs"
               variant="outline"
@@ -122,12 +126,12 @@ export const Toolbar = ({ initialData, preview }: ToolbarProps) => {
           onKeyDown={onKeyDown}
           value={value}
           onChange={(e) => onInput(e.target.value)}
-          className="text-5xl bg-transparent font-bold break-words outline-none text-[#3F2F3F] dark:text-[#CFCFCF] resize-none"
+          className="sm:text-5xl text-[2.5rem] bg-transparent font-bold break-words outline-none text-[#3F2F3F] dark:text-[#CFCFCF] resize-none"
         />
       ) : (
         <div
           onClick={enableEditing}
-          className="pb-[11.5px] text-5xl font-bold break-words text-[#3F2F3F] dark:text-[#CFCFCF]"
+          className="pb-[11.5px] sm:text-5xl text-[2.5rem] font-bold break-words text-[#3F2F3F] dark:text-[#CFCFCF]"
         >
           {initialData.title}
         </div>

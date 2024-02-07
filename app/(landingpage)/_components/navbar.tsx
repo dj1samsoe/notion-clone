@@ -16,7 +16,7 @@ export const Navbar = () => {
   return (
     <div
       className={cn(
-        "z-50 bg-background dark:bg-[#1F1F1F] fixed top-0 flex items-center w-full p-6",
+        "z-50 bg-background dark:bg-[#1F1F1F] fixed top-0 flex items-center w-full py-3 px-5",
         scrolled && "border-b shadow-md"
       )}
     >
@@ -30,12 +30,12 @@ export const Navbar = () => {
         )}
         {!isAuthenticated && !isLoading && (
           <>
-            <SignInButton mode="modal">
+            <SignInButton mode="modal" afterSignInUrl="/documents">
               <Button variant="ghost" size="sm">
                 Log in
               </Button>
             </SignInButton>
-            <SignInButton mode="modal">
+            <SignInButton mode="modal" afterSignInUrl="/documents">
               <Button size="sm">Get Dotion free</Button>
             </SignInButton>
           </>

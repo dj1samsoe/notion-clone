@@ -33,6 +33,7 @@ const DocumentsPage = () => {
         src="/empty.png"
         width={300}
         height={300}
+        loading="lazy"
         alt="Empty Document"
         className="dark:hidden"
       />
@@ -40,6 +41,7 @@ const DocumentsPage = () => {
         src="/empty-dark.png"
         width={300}
         height={300}
+        loading="lazy"
         alt="Empty Document"
         className="hidden dark:block"
       />

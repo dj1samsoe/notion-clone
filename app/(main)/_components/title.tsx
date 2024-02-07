@@ -66,7 +66,7 @@ export const Title = ({ initialData }: TitleProps) => {
           onClick={enableEditing}
           variant="ghost"
           size="sm"
-          className="font-normal h-auto px-2 py-1 focus-visible:ring-transparent"
+          className="font-light h-auto px-2 py-1 focus-visible:ring-transparent"
         >
           <span className="truncate">{initialData?.title}</span>
         </Button>

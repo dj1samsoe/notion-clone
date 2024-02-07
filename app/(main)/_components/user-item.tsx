@@ -11,7 +11,7 @@ import {
   DropdownMenuTrigger,
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
-import { SignOutButton, useUser } from "@clerk/clerk-react";
+import { SignOutButton, SignUpButton, useUser } from "@clerk/clerk-react";
 
 export const UserItem = () => {
   const { user } = useUser();
@@ -35,34 +35,42 @@ export const UserItem = () => {
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent
-        className="w-80"
+        className="w-80 bg-secondary shadow-xl"
         align="start"
         alignOffset={11}
         forceMount
       >
-        <div className="flex flex-col space-y-4 p-2">
-          <p className="text-xs leading-none text-muted-foreground">
+        <div className="flex flex-col space-y-3 py-2">
+          <p className="text-xs leading-none text-muted-foreground px-2">
             {user?.emailAddresses[0].emailAddress}
           </p>
-          <div className="flex items-center gap-x-2">
-            <div className="rounded-xl bg-secondary p-1">
-              <Avatar className="h-5 w-5">
-                <AvatarImage src={user?.imageUrl} />
-              </Avatar>
-            </div>
+          <div className="flex items-center gap-x-2 cursor-pointer dark:hover:bg-neutral-700 hover:bg-neutral-200 rounded-md px-3 py-1">
+            <Avatar className="h-7 w-7 rounded-md">
+              <AvatarImage src={user?.imageUrl} />
+            </Avatar>
             <div className="space-y-1">
               <p className="text-sm line-clamp-1">
-                {user?.firstName}&apos;s Dotion
+                {user?.fullName}&apos;s Dotion
+              </p>
+              <p className="text-xs text-neutral-600 dark:text-neutral-400">
+                Free Plan - 1 member
               </p>
             </div>
           </div>
         </div>
         <DropdownMenuSeparator />
-        <SignOutButton>
-          <DropdownMenuItem className="cursor-pointer">
-            <span>Sign out</span>
-          </DropdownMenuItem>
-        </SignOutButton>
+        <DropdownMenuItem>
+          {/* <SignUpButton>
+            <span className="cursor-pointer dark:hover:bg-neutral-700 hover:bg-neutral-200 rounded-md w-full px-2 py-1.5 text-xs text-neutral-600 dark:text-neutral-400">
+              Add another account
+            </span>
+          </SignUpButton> */}
+          <SignOutButton>
+            <span className="cursor-pointer dark:hover:bg-neutral-700 hover:bg-neutral-200 rounded-md w-full px-2 py-1.5 text-xs text-neutral-600 dark:text-neutral-400">
+              Log out
+            </span>
+          </SignOutButton>
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

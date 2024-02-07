@@ -8,12 +8,14 @@ export const Heroes = () => {
           <Image
             src="/documents.png"
             fill
+            loading="lazy"
             className="object-contain dark:hidden"
             alt="Documents"
           />
           <Image
             src="/documents-dark.png"
             fill
+            loading="lazy"
             className="object-contain hidden dark:block"
             alt="Documents"
           />
@@ -22,12 +24,14 @@ export const Heroes = () => {
           <Image
             src="/reading.png"
             fill
+            loading="lazy"
             className="object-contain dark:hidden"
             alt="Reading"
           />
           <Image
             src="/reading-dark.png"
             fill
+            loading="lazy"
             className="object-contain hidden dark:block"
             alt="Reading"
           />

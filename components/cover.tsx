@@ -35,7 +35,7 @@ export const Cover = ({ url, preview }: CoverProps) => {
   return (
     <div
       className={cn(
-        "relative w-full h-[40vh] group",
+        "relative w-full h-[37vh] group",
         !url && "h-[12vh]",
         url && "bg-muted"
       )}
@@ -50,7 +50,7 @@ export const Cover = ({ url, preview }: CoverProps) => {
         />
       )}
       {url && !preview && (
-        <div className="opacity-100 group-hover:opacity-100 absolute bottom-5 right-5 flex items-center gap-x-2 md:opacity-0">
+        <div className="opacity-100 group-hover:opacity-100 absolute top-16 right-5 flex items-center gap-x-2 md:opacity-0">
           <Button
             onClick={() => coverImage.onReplace(url)}
             className="text-muted-foreground text-xs"

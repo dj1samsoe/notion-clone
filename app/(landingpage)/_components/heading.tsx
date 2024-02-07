@@ -10,13 +10,13 @@ export const Heading = () => {
   const { isAuthenticated, isLoading } = useConvexAuth();
   return (
     <div className="max-w-3xl space-y-4">
-      <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold">
-        Your Ideas, Documents, & Plans. Unified. Welcome to{" "}
-        <span className="underline">Dotion</span>
-      </h1>
+      <span className="text-3xl sm:text-5xl md:text-6xl font-bold">
+        Your Projects, Content, & Goals. Simplified.
+      </span>
       <h3 className="text-base sm:text-xl md:text-2xl font-medium">
-        Dotion is the connected workspace for modern teams.
-        <br /> It brings together your notes, tasks, and docs.
+        Dotion is the smart workspace for productive teams.
+        <br />
+        It helps you organize your notes, tasks, and docs.
       </h3>
       {isLoading && (
         <div className="w-full flex items-center justify-center">

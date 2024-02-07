@@ -11,7 +11,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
 
   if (isLoading) {
     return (
-      <div className="h-full flex items-center justify-center gap-x-2">
+      <div className="min-h-screen flex items-center justify-center gap-x-2">
         <Spinner size="lg" />
         <p>Loading...</p>
       </div>
