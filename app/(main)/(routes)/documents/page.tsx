@@ -46,7 +46,7 @@ const DocumentsPage = () => {
         className="hidden dark:block"
       />
       <h2 className="text-lg font-medium">
-        Welcome to {user?.firstName}&apos;s{" "}
+        Welcome to {user?.fullName}&apos;s{" "}
         <span className="font-bold">Dotion</span>
       </h2>
       <Button onClick={onCreate}>

@@ -21,7 +21,7 @@ export const Navbar = () => {
       )}
     >
       <Logo />
-      <div className="md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-2">
+      <div className="md:ml-auto justify-end w-full flex items-center gap-x-2">
         {isLoading && (
           <>
             <div className="animate-pulse bg-gray-300 dark:bg-gray-700 h-6 w-24 rounded" />
@@ -40,15 +40,15 @@ export const Navbar = () => {
             </SignInButton>
           </>
         )}
+        <ModeToggle />
         {isAuthenticated && !isLoading && (
           <>
-            <Button variant="ghost" size="sm" asChild>
+            {/* <Button variant="ghost" size="sm" asChild>
               <Link href="/documents">Enter Dotion</Link>
-            </Button>
+            </Button> */}
             <UserButton afterSignOutUrl="/" />
           </>
         )}
-        <ModeToggle />
       </div>
     </div>
   );

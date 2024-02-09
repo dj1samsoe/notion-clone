@@ -11,7 +11,7 @@ const font = Nunito_Sans({
 
 export const Logo = () => {
   return (
-    <Link href={"/"} className="hidden md:flex items-center gap-x-1">
+    <Link href={"/"} className="flex items-center gap-x-1">
       <Image
         src="/logo.png"
         width={35}
