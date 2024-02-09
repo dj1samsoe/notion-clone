@@ -60,7 +60,7 @@ export const SearchCommand = () => {
           {documents?.map((document: any) => (
             <CommandItem
               key={document._id}
-              value={`${document._id}`}
+              value={`${document.title}`}
               title={document.title}
               onSelect={onSelect}
               className="flex items-center space-x-2 cursor-pointer"
